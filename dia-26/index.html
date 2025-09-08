@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Día 26 - DOM Intro</title>
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; padding: 2rem; background:#f7fbff; color:#0b1226; }
+    .card { max-width:760px; margin: 0 auto 1.25rem; padding:1.25rem; background:white; border-radius:12px; box-shadow:0 6px 18px rgba(2,6,23,0.06); }
+    label { display:block; margin-bottom:.5rem; font-weight:600; }
+    input[type="text"] { width:100%; padding:.6rem .8rem; border-radius:8px; border:1px solid #e6edf3; }
+    button { margin-top:.75rem; padding:.6rem .9rem; border-radius:8px; background:#4f46e5; color:white; border:none; cursor:pointer;}
+    .output { margin-top:1rem; padding:.75rem; background:#f1f5f9; border-radius:8px; min-height:2rem; }
+    .small { font-size:.9rem; color:#64748b; margin-top:.5rem; }
+  </style>
+</head>
+<body>
+  <div class="card" id="app">
+    <h1 id="page-title">Manipulación del DOM — Día 26</h1>
+
+    <div>
+      <label for="user-input">Escribe algo y presiona Mostrar:</label>
+      <input type="text" id="user-input" placeholder="Escribe aquí...">
+      <div style="display:flex; gap:.6rem;">
+        <button id="btn-show">Mostrar</button>
+        <button id="btn-clear" type="button">Limpiar</button>
+      </div>
+      <p class="small">Tip: presiona Enter en el input para ver el resultado también.</p>
+    </div>
+
+    <div class="output" id="output" aria-live="polite" aria-atomic="true"></div>
+
+    <hr style="margin:1.25rem 0; border:none; border-top:1px solid #eef2ff;">
+
+    <div>
+      <h2>Ejemplos rápidos (console)</h2>
+      <p class="small">Abre la consola del navegador para ver ejemplos adicionales que el script ejecuta.</p>
+    </div>
+  </div>
+
+  <script src="/dia-26/js/dom-intro.js"></script>
+</body>
+</html>
+
