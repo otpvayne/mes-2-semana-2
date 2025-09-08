@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista dinámica</title>
+</head>
+<body>
+  <h2>Mi lista dinámica</h2>
+  <input type="text" id="itemInput" placeholder="Escribe un ítem">
+  <button id="addBtn">Agregar</button>
+
+  <ul id="lista"></ul>
+
+  <script>
+    const input = document.getElementById("itemInput");
+    const addBtn = document.getElementById("addBtn");
+    const lista = document.getElementById("lista");
+
+    addBtn.addEventListener("click", () => {
+      // 1. Capturar lo que escribió el usuario
+      let texto = input.value.trim();
+
+      // 2. Validar que no esté vacío
+      if (texto === "") {
+        alert("Escribe algo primero");
+        return;
+      }
+
+      // 3. Crear un <li> y asignar el texto
+      let li = document.createElement("li");
+      li.innerText = texto;
+
+      // 4. Agregar el <li> a la lista
+      lista.appendChild(li);
+
+      // 5. Limpiar el input
+      input.value = "";
+    });
+  </script>
+</body>
+</html>
+
