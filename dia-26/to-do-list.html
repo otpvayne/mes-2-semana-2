@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do List DOM</title>
+  <style>
+    li {
+      margin: 5px 0;
+    }
+    button {
+      margin-left: 10px;
+      color: white;
+      background: red;
+      border: none;
+      padding: 3px 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>✅ Lista de Tareas</h2>
+  <input type="text" id="taskInput" placeholder="Escribe una tarea">
+  <button id="addTask">Agregar</button>
+
+  <ul id="taskList"></ul>
+
+  <script>
+    const input = document.getElementById("taskInput");
+    const addTaskBtn = document.getElementById("addTask");
+    const taskList = document.getElementById("taskList");
+
+    addTaskBtn.addEventListener("click", () => {
+      let tarea = input.value.trim();
+      if (tarea === "") return alert("Escribe una tarea primero");
+
+      // Crear el li
+      let li = document.createElement("li");
+      li.innerText = tarea;
+
+      // Crear botón eliminar
+      let deleteBtn = document.createElement("button");
+      deleteBtn.innerText = "Eliminar";
+
+      // Evento del botón eliminar
+      deleteBtn.addEventListener("click", () => {
+        taskList.removeChild(li);
+      });
+
+      // Insertar botón dentro del li
+      li.appendChild(deleteBtn);
+
+      // Agregar li a la lista
+      taskList.appendChild(li);
+
+      // Limpiar input
+      input.value = "";
+    });
+  </script>
+</body>
+</html>
+
