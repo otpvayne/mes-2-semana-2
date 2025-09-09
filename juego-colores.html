@@ -1,0 +1,16 @@
+<h2>🎨 Juego de Colores</h2>
+<button class="colorBtn" data-color="red">Rojo</button>
+<button class="colorBtn" data-color="green">Verde</button>
+<button class="colorBtn" data-color="blue">Azul</button>
+<button class="colorBtn" data-color="yellow">Amarillo</button>
+
+<script>
+  const botones = document.querySelectorAll(".colorBtn");
+
+  botones.forEach((btn) => {
+    btn.addEventListener("click", (event) => {
+      let color = event.target.getAttribute("data-color");
+      document.body.style.backgroundColor = color;
+    });
+  });
+</script>

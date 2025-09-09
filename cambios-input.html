@@ -1,0 +1,11 @@
+<input type="text" id="nombre" placeholder="Tu nombre">
+<p id="preview"></p>
+
+<script>
+  const nombre = document.getElementById("nombre");
+  const preview = document.getElementById("preview");
+
+  nombre.addEventListener("input", () => {
+    preview.innerText = `Hola, ${nombre.value}`;
+  });
+</script>

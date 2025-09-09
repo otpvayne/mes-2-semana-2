@@ -1,0 +1,11 @@
+<input type="text" id="inputTexto" placeholder="Escribe algo">
+<div id="salida"></div>
+
+<script>
+  const input = document.getElementById("inputTexto");
+  const salida = document.getElementById("salida");
+
+  input.addEventListener("keyup", (event) => {
+    salida.innerText = `Escribiste: ${event.target.value}`;
+  });
+</script>
