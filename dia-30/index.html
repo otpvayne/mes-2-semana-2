@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notas Interactivas</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    #notesList li { margin: 5px 0; }
+    button { margin-left: 10px; }
+    #counter { font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>📒 Mis Notas</h1>
+
+  <form id="noteForm">
+    <input type="text" id="noteInput" placeholder="Escribe una nota">
+    <button type="submit">Agregar</button>
+  </form>
+
+  <p>Total de notas: <span id="counter">0</span></p>
+
+  <ul id="notesList"></ul>
+
+  <script src="/dia-30/script.js"></script>
+</body>
+</html>
